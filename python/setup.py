@@ -38,7 +38,8 @@ console_script_modules = [
     'latex.latex_showcites',
     'misc.buildout_versions',
     'text.oneline',
-    'text.rbeautifysql'
+    'text.rbeautifysql',
+    'music.cp_rand_albums',
 ]
 
 setup(
@@ -63,7 +64,12 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        # -*- Extra requirements: -*-
+        'clom',
+        'docopt',
+        'walkdir',
+        'rbco.commandwrap',
+        'prdg.util',
+        'pathlib',
     ],
     entry_points={'console_scripts': [console_script(m) for m in console_script_modules]},
 )

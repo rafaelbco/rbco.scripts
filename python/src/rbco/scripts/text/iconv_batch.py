@@ -2,10 +2,10 @@
 """Convert files from one encoding to another.
 
 Usage:
-  iconv_batch [options] <FROM> <TO> <FILE>...
+  iconv_batch [options] <from> <to> <file>...
 
-Convert <FROM> one encoding <TO> another. Only files detected to be in the the
-given <FROM> encoding will be converted.
+Convert <from> one encoding <to> another. Only files detected to be in the the
+given <from> encoding will be converted.
 
 Encoding names must conform to the output of "file --mime-type" and be
 understood by Python as a valid encoding name.
@@ -27,9 +27,9 @@ def detect_encoding(path):
 
 def main():
     arguments = docopt(__doc__)
-    from_encoding = arguments['<FROM>']
-    to_encoding = arguments['<TO>']
-    files = arguments['<FILE>']
+    from_encoding = arguments['<from>']
+    to_encoding = arguments['<to>']
+    files = arguments['<file>']
     dry_run = arguments['--dry-run']
 
     for path in files:
