@@ -1,0 +1,17 @@
+#!/bin/bash
+# Wrapper for guake in order to make it usable as an "x-terminal-emulator" alternative.
+
+# Debug:
+# notify-send "Cmd: $0"
+# notify-send "Args: $@"
+# notify-send "Current dir: `pwd`"
+
+# Handles the case where gksu is used to invoke "x-terminal-emulator".
+# We detect this by checking if the current user is root.
+# We don't want two instances of guake, so we launch gnome-terminal instead.
+if (( EUID == 0 )); then
+    gnome-terminal $@
+    exit
+fi
+
+guake --new-tab="`pwd`" --toggle-visibility
