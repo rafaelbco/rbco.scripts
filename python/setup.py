@@ -42,6 +42,7 @@ console_script_modules = [
     'misc.ack_find',
     'text.oneline',
     'text.rbeautifysql',
+    'text.last_changelog_entry',
     'music.cp_rand_albums',
 ]
 
