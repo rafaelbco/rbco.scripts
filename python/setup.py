@@ -1,9 +1,8 @@
 from setuptools import setup, find_packages
-import os
 
 name = 'rbco.scripts'
 
-version = '0.0.1-dev'
+version = '0.0.1.dev0'
 
 long_description = (
     open('README.txt').read()
@@ -54,7 +53,7 @@ setup(
     # Get more strings from
     # http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
-        "Programming Language :: Python",
+        "Programming Language :: Python :: 2.7",
     ],
     keywords='',
     author='Rafael Oliveira',
