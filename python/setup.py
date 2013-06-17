@@ -68,12 +68,12 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'clom',
-        'docopt',
-        'walkdir',
-        'rbco.commandwrap',
-        'prdg.util',
-        'pathlib',
+        'clom>=0.7.4,<=0.7.999',
+        'docopt>=0.6.1,<=0.6.999',
+        'walkdir==0.3',
+        'rbco.commandwrap>=0.0.2,<=0.0.999',
+        'prdg.util>=0.0.7,<=0.0.999',
+        'pathlib==0.8',
     ],
     entry_points={'console_scripts': [console_script(m) for m in console_script_modules]},
 )
