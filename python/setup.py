@@ -72,7 +72,7 @@ setup(
         'walkdir==0.3',
         'rbco.commandwrap>=0.0.2,<=0.0.999',
         'prdg.util>=0.0.7,<=0.0.999',
-        'pathlib==0.8',
+        'pathlib>=0.97',
     ],
     entry_points={'console_scripts': [console_script(m) for m in console_script_modules]},
 )

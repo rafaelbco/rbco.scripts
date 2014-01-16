@@ -32,9 +32,9 @@ def copy_dir_non_recursively(source, dest):
 
     Arguments are `Path` instances.
     """
-    full_dest_str = str(dest[source.name])
+    full_dest_str = str(dest / source.name)
     os.mkdir(full_dest_str)
-    for f in source:
+    for f in source.iterdir():
         if f.is_file():
             shutil.copy(str(f), full_dest_str)
 
