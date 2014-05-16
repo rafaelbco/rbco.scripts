@@ -6,11 +6,17 @@
 # notify-send "Args: $@"
 # notify-send "Current dir: `pwd`"
 
+OTHER_TERM=/usr/bin/gnome-terminal
+
+if [ ! -e $OTHER_TERM ]; then
+    OTHER_TERM=/usr/bin/mate-terminal
+fi
+
 # Handles the case where gksu is used to invoke "x-terminal-emulator".
 # We detect this by checking if the current user is root.
-# We don't want two instances of guake, so we launch gnome-terminal instead.
+# We don't want two instances of guake, so we launch $OTHER_TERM instead.
 if (( EUID == 0 )); then
-    gnome-terminal $@
+    $OTHER_TERM $@
     exit
 fi
 
