@@ -1,7 +1,7 @@
 #!/usr/bin/python
 """usage: %prog [options] DATE1 [DATE2]
 
-Prints out the difference between the two dates. If DATE2 is ommited then it is
+Prints out the difference in days between the two dates. If DATE2 is ommited then it is
 substituted by today.
 
 Date format is like "01jan2013". Accepts months abbreviations in english and portuguese.
@@ -35,7 +35,7 @@ MONTHS_ABBREVIATIONS = [
     ('mai', 'may',),
     ('jun',),
     ('jul',),
-    ('ago',),
+    ('ago', 'aug',),
     ('set', 'sep',),
     ('out', 'oct',),
     ('nov',),
