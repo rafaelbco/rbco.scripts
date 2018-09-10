@@ -37,9 +37,9 @@ console_script_modules = [
     'misc.ack_kill',
     'misc.ack_find',
     'misc.ftpserver',
+    'text.iconv_batch',
     'text.oneline',
     'text.rbeautifysql',
-    'text.last_changelog_entry',
     'music.cp_rand_albums',
 ]
 
