@@ -26,9 +26,6 @@ def console_script(module, function='main'):
     )
 
 console_script_modules = [
-    'cvs.cvs_bump_version',
-    'cvs.cvs_make_version_final',
-    'cvs.cvs_tag_current_version',
     'datetime.ddiff',
     'finance.parcelas',
     'latex.latex2html_wrap',
