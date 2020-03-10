@@ -1,0 +1,4 @@
+#!/bin/bash
+APPS_DIR="/usr/share/applications"
+COMMAND=$(ls ${APPS_DIR}/*.desktop | xargs -n1 basename --suffix=.desktop | sort --unique | fzf)
+"${COMMAND}" &

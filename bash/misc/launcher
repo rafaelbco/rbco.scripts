@@ -1,0 +1,14 @@
+#!/bin/bash
+THINGS="Terminal|x-terminal-emulator
+Terminal in an Specific Session|t
+WWW Browser|xwww
+WWW Browser in an Specific Profile|xwwwp
+All Commands|cmds
+All X Applications|xcmds
+"
+
+COMMAND=$(echo "${THINGS}" | fzf | cut -d'|' -f2)
+
+if [[ -n ${COMMAND} ]]; then
+    /bin/bash -i -c "${COMMAND}"
+fi

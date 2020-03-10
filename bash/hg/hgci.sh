@@ -4,4 +4,4 @@ HISTORY
 Prepara release
 Refactoring"
 
-echo "$MESSAGES" | hg ci -m "$(percol)"
+echo "$MESSAGES" | hg ci -m "$(fzf)"
