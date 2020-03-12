@@ -1,8 +1,8 @@
 #!/bin/bash
 THINGS="Terminal|x-terminal-emulator
 Terminal in an Specific Session|t
-WWW Browser|xwww
-WWW Browser in an Specific Profile|xwwwp
+WWW Browser|xw
+WWW Browser in an Specific Profile|xwp
 All Commands|cmds
 All X Applications|xcmds
 "

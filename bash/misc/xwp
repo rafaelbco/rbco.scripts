@@ -1,11 +1,10 @@
 #!/bin/bash
-# Usage: xwwwp
+# Usage: xwp
 # Open web browser using an specific profile.
 CONFIG="${HOME}/.config/google-chrome/Local State"
 QUERY='.profile.info_cache | to_entries[] | [.value.name, .value.gaia_name, .key] | join("|")'
 PROFILES=$(jq -r "${QUERY}" "${CONFIG}" | sort)
 PROFILE=$(echo "${PROFILES}" | fzf | cut -d"|" -f3 | xargs)  # Use xargs to trim whitespaces.
-echo $PROFILE
-# if [[ -n ${PROFILE} ]]; then
-#     /usr/bin/x-www-browser --profile-directory="$PROFILE" 2> /dev/null &
-# fi
+if [[ -n "${PROFILE}" ]]; then
+    /usr/bin/x-www-browser --profile-directory="$PROFILE" 2> /dev/null &
+fi
