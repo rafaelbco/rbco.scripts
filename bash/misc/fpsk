@@ -4,4 +4,10 @@
 
 # Params ranges: https://stackoverflow.com/a/42832469
 
-fps "$1" | xargs kill "${@:2:99}"
+PIDS=$(fps "$1" | xargs)
+KILL_ARGS="${@:2:99}"
+
+if [[ -n "${PIDS}" ]]; then
+    echo "Running: kill ${KILL_ARGS} ${PIDS}..."
+    echo ${PIDS} | xargs kill "${KILL_ARGS}"
+fi
