@@ -1,0 +1,7 @@
+#!/bin/bash
+# Select and kill processes
+# Usage: fps [<query>] [<kill-args>...]
+
+# Params ranges: https://stackoverflow.com/a/42832469
+
+fps "$1" | xargs kill "${@:2:99}"
