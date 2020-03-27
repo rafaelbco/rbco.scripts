@@ -1,10 +1,12 @@
 #!/bin/bash
-THINGS="Terminal|x-terminal-emulator
+THINGS="Commands|cmds
+Manuals in WWW Browser|bman
+Manuals|fman
 Terminal in an Specific Session|t
-WWW Browser|xw
+Terminal|x-terminal-emulator
 WWW Browser in an Specific Profile|xwp
-All Commands|cmds
-All X Applications|xcmds
+WWW Browser|xw
+X Applications|xcmds
 "
 
 COMMAND=$(echo "${THINGS}" | fzf | cut -d'|' -f2)

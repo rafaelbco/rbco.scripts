@@ -14,8 +14,9 @@ BOLD="\033[1m"
 EM="\033[3m"
 RESET="\033[0m"
 
-# pass argv directly over to man
-man "$@" |
+MAN="$(select_man $@)"
+echo "Openning ${MAN}..."
+man ${MAN} |
 
 # replace ^H based bold and underline with ansi equivelants
 sed "

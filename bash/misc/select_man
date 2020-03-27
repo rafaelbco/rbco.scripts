@@ -1,0 +1,8 @@
+#!/bin/bash
+ARGS=$@
+man -k . --section 1 \
+    | sort \
+    | fzf --select-1 --exact --query="^${ARGS}" \
+    | awk '{print $2 $1}' \
+    | tr -s '()' ' ' \
+    | xargs

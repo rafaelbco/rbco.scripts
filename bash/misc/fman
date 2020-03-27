@@ -1,0 +1,2 @@
+#!/bin/bash
+select_man "$@" | xargs --no-run-if-empty man

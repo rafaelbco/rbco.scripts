@@ -9,5 +9,5 @@ KILL_ARGS="${@:2:99}"
 
 if [[ -n "${PIDS}" ]]; then
     echo "Running: kill ${KILL_ARGS} ${PIDS}..."
-    echo ${PIDS} | xargs kill "${KILL_ARGS}"
+    echo ${PIDS} | xargs kill ${KILL_ARGS}
 fi
