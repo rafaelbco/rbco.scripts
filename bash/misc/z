@@ -1,0 +1,20 @@
+#!/bin/bash
+THINGS="\
+Commands                            | cmds
+Manuals in WWW Browser              | bman
+Manuals                             | fman
+Terminal as root                    | gksu /usr/bin/x-terminal-emulator &
+Terminal in an Specific Session     | t
+Terminal                            | x-terminal-emulator &
+Python Shell                        | bpython
+WWW Browser in an Specific Profile  | xwp
+WWW Browser                         | xw
+X Applications                      | xcmds\
+"
+
+QUERY="$@"
+COMMAND=$(echo "${THINGS}" | fzf --query="${QUERY}" | cut -d'|' -f2 | xargs)
+
+if [[ -n ${COMMAND} ]]; then
+    /bin/bash -i -c "${COMMAND}"
+fi
