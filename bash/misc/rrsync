@@ -1,0 +1,5 @@
+#!/bin/bash
+# USAGE: rsync.sh <source> <dest> [<rsync_opts>...]
+# Use --dry-run to dry run.
+OPTS="--recursive --modify-window=10 --links --perms --times --one-file-system --delete --progress --verbose --human-readable"
+rsync ${OPTS} "${@:3}" "$1" "$2"
