@@ -1,0 +1,7 @@
+#!/bin/bash
+# USAGE: dconf_diff_all
+# Find all .dconf files (recursively) and call `dconf_diff` on each one.
+set -euo pipefail
+IFS=$'\n\t'
+
+fd '\.dconf$' | sort | xargs -n 1 dconf_diff

@@ -1,0 +1,15 @@
+#!/bin/bash
+# USAGE: dconf_diff <filename>
+# <filename> must be a path to a file like "org.my.app.dconf"
+# Compare the given file to the actual settings stored in dconf.
+set -euo pipefail
+IFS=$'\n\t'
+
+source dconf_functions.sh
+
+echo "Processing $1..."
+DCONF_PATH="$(file_to_dconf_path $1)"
+TMP_PATH=$(mktemp --suffix="_dconf_diff")
+dconf dump "$DCONF_PATH" > "$TMP_PATH"
+meld "$TMP_PATH" "$1"
+rm -f "$TMP_PATH"
