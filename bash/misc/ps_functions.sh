@@ -6,7 +6,7 @@ function extract_pid {
 # Given a line containing a PID at the beginning, print the full command of the process.
 function print_cmd {
     local PID=$(echo $1 | extract_pid)
-    cat /proc/${PID}/cmdline
+    cat /proc/${PID}/cmdline | xargs --null
 }
 
 export -f extract_pid
