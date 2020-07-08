@@ -1,5 +1,7 @@
 #!/bin/bash
 EXECUTE="/bin/bash -i -c"
-CMDS=$(${EXECUTE} -i -c "compgen -ca")
+CMDS=$(${EXECUTE} "compgen -ca")
 CMD=$(echo "${CMDS}" | sort --unique | fzf)
-${EXECUTE} "${CMD}"
+if [[ -n ${CMD} ]]; then
+    ${EXECUTE} "${CMD}"
+fi
