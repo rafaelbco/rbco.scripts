@@ -1,0 +1,4 @@
+#!/bin/bash
+secret-tool lookup local_user password  # Force unlock first.
+lssecret --secrets | egrep 'Secret:' | cut -f2 | sort | uniq | fzf | xclip -selection clipboard
+# xclip -selection clipboard -out

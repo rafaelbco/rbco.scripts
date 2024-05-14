@@ -4,4 +4,4 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-fd '\.dconf$' | sort | xargs -n 1 dconf_diff
+fdfind '\.dconf$' | sort | xargs -n 1 dconf_diff

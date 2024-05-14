@@ -17,7 +17,7 @@ mkdir -p "${TARGET}"
 if mountpoint --quiet "${TARGET}"; then
     echo "Already mounted."
 else
-    sudo mount --types=vboxsf --options="${OPTS}" "${SHARE}" "${TARGET}"
+    sudo --askpass mount --types=vboxsf --options="${OPTS}" "${SHARE}" "${TARGET}"
 fi
 
 echo "${TARGET}"
