@@ -1,2 +1,2 @@
 #!/bin/bash
-x-www-browser --profile-directory=Default 2> /dev/null &
+x-www-browser --profile-directory=Default "$@" 2> /dev/null &

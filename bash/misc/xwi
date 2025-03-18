@@ -1,0 +1,2 @@
+#!/bin/bash
+x-www-browser --profile-directory=Default --incognito 2> /dev/null &

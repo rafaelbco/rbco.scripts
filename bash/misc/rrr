@@ -1,14 +1,15 @@
 #!/bin/bash
 THINGS="\
 Commands                            | cmds
-Manuals in WWW Browser              | bman
 Manuals                             | fman
-Terminal as root                    | gksu /usr/bin/x-terminal-emulator &
-Terminal in an Specific Session     | t
-Terminal                            | x-terminal-emulator &
+Manuals in WWW Browser              | bman
 Python Shell                        | bpython
-WWW Browser in an Specific Profile  | xwp
+Terminal                            | x-terminal-emulator &
+Terminal - Root                     | gksu /usr/bin/x-terminal-emulator &
+Terminal - Specific Session         | t
 WWW Browser                         | xw
+WWW Browser - Icongnito             | xwi
+WWW Browser - Specific Profile      | xwp
 X Applications                      | xcmds\
 "
 
