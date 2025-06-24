@@ -4,7 +4,7 @@ source ps_functions.sh
 
 EXCLUDE='fps|fpsk|fzf'
 
-procs --pager=disable --color=disable --sorta=Command \
+procs --pager=disable --color=disable \
     | egrep -vw ${EXCLUDE} \
     | fzf --exact --multi --header-lines=2 --query="$1" --preview='print_cmd {}' --preview-window='bottom:3:wrap' \
     | extract_pid
